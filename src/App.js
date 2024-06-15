@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 
 import './App.css';
 
@@ -8,7 +8,7 @@ import Packages from './components/Packages'
 
 
 function App() {
-  
+
   const packages = ['Activate your Crystals', 'Monkey Meditation', 'Soak in the Hotsprings', 'Hypnotherapy', 'Mineral Bath']
 
 
@@ -34,9 +34,11 @@ function App() {
         </header>
 
         <div className="display">
-          <Route path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/packages" render={() => <Packages packages={packages}/>}  />
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/about" element={<About/>} />
+            <Route path="/packages" render={() => <Packages packages={packages}/>}  />
+          </Routes>
         </div>
 
       </Router>
@@ -46,8 +48,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
