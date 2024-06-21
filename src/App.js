@@ -35,9 +35,9 @@ function App() {
 
         <div className="display">
           <Routes>
-            <Route path="/" element={<Home/>} />
-            <Route path="/about" element={<About/>} />
-            <Route path="/packages" render={() => <Packages packages={packages}/>}  />
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/packages" element={<Packages packages={packages} />} />
           </Routes>
         </div>
 
