@@ -1,4 +1,4 @@
-
+import ListGroup from 'react-bootstrap/ListGroup';
 
 export default function Packages(props) {
     const displayPackages = props.packages.map((eachPackage) => <li>{eachPackage}</li>)
@@ -9,9 +9,9 @@ export default function Packages(props) {
                 <div className="packagesHeader">
                     <h1>Our Packages</h1>
                 </div>
-                <ul>
-                    {displayPackages}
-                </ul>
+                <ListGroup as="ul">
+                    <ListGroup.Item as="li" active>{displayPackages}</ListGroup.Item>
+                </ListGroup>
             </div>
         </div>
     )
